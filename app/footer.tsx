@@ -2,6 +2,8 @@
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import { TextLoop } from '@/components/ui/text-loop'
 import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
+import { AnimatePresence } from 'motion/react'
+import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
@@ -36,33 +38,28 @@ function ThemeSwitch() {
   }
 
   return (
-    <AnimatedBackground
-      className="pointer-events-none rounded-lg bg-zinc-100 dark:bg-zinc-800"
-      defaultValue={theme}
-      transition={{
-        type: 'spring',
-        bounce: 0,
-        duration: 0.2,
-      }}
-      enableHover={false}
-      onValueChange={(id) => {
-        setTheme(id as string)
-      }}
-    >
-      {THEMES_OPTIONS.map((theme) => {
-        return (
-          <button
-            key={theme.id}
-            className="inline-flex h-7 w-7 items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50"
-            type="button"
-            aria-label={`Switch to ${theme.label} theme`}
-            data-id={theme.id}
-          >
-            {theme.icon}
-          </button>
-        )
-      })}
-    </AnimatedBackground>
+    <AnimatePresence initial={false}>
+      <motion.div>
+        {
+          THEMES_OPTIONS.map((theme) => {
+            return (
+              <button
+                key={theme.id}
+                className="inline-flex h-7 w-7 items-center justify-center text-zinc-500 transition-colors duration-100 focus-visible:outline-2 data-[checked=true]:text-zinc-950 dark:text-zinc-400 dark:data-[checked=true]:text-zinc-50"
+                type="button"
+                aria-label={`Switch to ${theme.label} theme`}
+                data-id={theme.id}
+                onClick={() => {
+                  setTheme(theme.id)
+                }}
+              >
+                {theme.icon}
+              </button>
+            )
+          })
+        }
+      </motion.div>
+    </AnimatePresence>
   )
 }
 
@@ -72,8 +69,8 @@ export function Footer() {
       <div className="flex items-center justify-between">
         <a href="https://github.com/ibelick/nim" target="_blank">
           <TextLoop className="text-xs text-zinc-500">
-            <span>© 2024 Nim.</span>
-            <span>Built with Motion-Primitives.</span>
+            <span>© {new Date().getFullYear()} JAN CASPAR SCHARBATKE.</span>
+            <span>WITH ❤️ FROM MOERS, GERMANY.</span>
           </TextLoop>
         </a>
         <div className="text-xs text-zinc-400">

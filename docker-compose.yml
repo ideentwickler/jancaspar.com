@@ -1,0 +1,27 @@
+services:
+  nextjs:
+    build:
+      context: .
+    container_name: nextjs-jancaspar
+    ports:
+      - "3334:3334"
+    restart: always
+
+  nginx:
+    build:
+      context: ./nginx
+    container_name: nginx-jancaspar
+    networks:
+      - "default"
+      - "net"
+    environment:
+      - VIRTUAL_HOST=jancaspar.com,www.jancaspar.com
+      - LETSENCRYPT_HOST=jancaspar.com,www.jancaspar.com
+      - LETSENCRYPT_EMAIL=hallo@jancaspar.com
+    restart: always
+    depends_on:
+      - nextjs
+
+networks:
+  net:
+    external: true

@@ -12,8 +12,8 @@ import {
 
 export type AnimatedBackgroundProps = {
   children:
-    | ReactElement<{ 'data-id': string }>[]
-    | ReactElement<{ 'data-id': string }>
+  | ReactElement<{ 'data-id': string }>[]
+  | ReactElement<{ 'data-id': string }>
   defaultValue?: string
   onValueChange?: (newActiveId: string | null) => void
   className?: string
@@ -51,12 +51,12 @@ export function AnimatedBackground({
 
     const interactionProps = enableHover
       ? {
-          onMouseEnter: () => handleSetActiveId(id),
-          onMouseLeave: () => handleSetActiveId(null),
-        }
+        onMouseEnter: () => handleSetActiveId(id),
+        onMouseLeave: () => handleSetActiveId(null),
+      }
       : {
-          onClick: () => handleSetActiveId(id),
-        }
+        onClick: () => handleSetActiveId(id),
+      }
 
     return cloneElement(
       child,
@@ -71,7 +71,7 @@ export function AnimatedBackground({
           {activeId === id && (
             <motion.div
               layoutId={`background-${uniqueId}`}
-              className={cn('absolute inset-0', className)}
+              className={cn('absolute inset-0 rounded-xl border-2 bg-gradient-to-r from-zinc-400 via-zinc-500 to-zinc-600 dark:from-zinc-700 dark:via-zinc-800 dark:to-zinc-900 animate-gradient-x [mask:linear-gradient(#fff_0_0)_padding-box,linear-gradient(#fff_0_0)] [border-image:linear-gradient(to_right,var(--tw-gradient-from),var(--tw-gradient-via),var(--tw-gradient-to))_1]', className)}
               transition={transition}
               initial={{ opacity: defaultValue ? 1 : 0 }}
               animate={{
@@ -79,6 +79,7 @@ export function AnimatedBackground({
               }}
               exit={{
                 opacity: 0,
+                transition: { duration: 0.2 },
               }}
             />
           )}
