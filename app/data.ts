@@ -117,7 +117,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Head of Digital',
     start: '2024',
     end: '2025',
-    link: 'https://ibelick.com',
+    link: 'https://www.linkedin.com/in/jan-scharbatke-8351231b8/',
     id: 'work1',
   },
   {
@@ -125,7 +125,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Team Lead & Projectmanager',
     start: '2022',
     end: '2024',
-    link: 'https://ibelick.com',
+    link: 'https://www.linkedin.com/in/jan-scharbatke-8351231b8/',
     id: 'work2',
   },
   {
@@ -133,7 +133,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Projectassistant for Managing Director (Sales)',
     start: '2019',
     end: '2021',
-    link: 'https://ibelick.com',
+    link: 'https://www.linkedin.com/in/jan-scharbatke-8351231b8/',
     id: 'work3',
   },
   {
@@ -141,7 +141,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Merchandiser Area Manager (Kitchen Sales)',
     start: '2009',
     end: '2018',
-    link: 'https://ibelick.com',
+    link: 'https://www.linkedin.com/in/jan-scharbatke-8351231b8/',
     id: 'work4',
   },
 ]

@@ -1,13 +1,11 @@
 'use client'
 import { motion } from 'motion/react'
-import { XIcon } from 'lucide-react'
 
 import Press from './sections/press'
 import Blog from './sections/blog'
 import Contact from './sections/contact'
 import TechStack from './sections/techstack'
 import WorkExperience from './sections/workexperience'
-import Line from '@/components/ui/line'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -42,9 +40,9 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex-1">
-          <p className="text-zinc-600 dark:text-zinc-400 p-4 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50/50 dark:bg-zinc-900/50">
-            Throughout my 20-year retail journey, I've navigated diverse roles from kitchen sales specialist to Head of Digital.
-            This comprehensive experience gives me a unique perspective that bridges frontline customer interactions with strategic digital transformation.
+          <p className="text-zinc-600 italic dark:text-zinc-400 p-4  bg-zinc-50/50 dark:bg-zinc-900/50">
+            „I combine a 20-year career in retail, from kitchen specialist in sales to Head of Digital - with a passion for programming and new technologies that I have had since childhood.
+            This extensive experience gives me a unique perspective that combines personal customer interaction, processes and procedures in business with strategic digital transformation.“
           </p>
         </div>
       </motion.section>
