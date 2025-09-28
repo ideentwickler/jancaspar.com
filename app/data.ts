@@ -70,6 +70,13 @@ export const TECH_STACK: TechStack[] = [
 
 export const PRESS_POSTS: PressPost[] = [
   {
+    title: 'CASPAR DIGITAL - Partner für KI-Integration & Workflow-Automatisierung',
+    description: 'Wie Unternehmen durch KI-Integration, Workflow-Automatisierung und Digitalisierung bis zu 30% der Kosten einsparen können',
+    link: 'https://www.caspar-digital.de',
+    uid: 'press-post-4',
+    company: 'caspar-digital.de'
+  },
+  {
     title: 'POCO hebt mit Salesforce seinen Datenschatz an historischen Kundendaten',
     description: 'Wie POCO mit Golden Records Cross- und Up-Selling-Potenziale ausschöpft ',
     link: 'https://www.salesforce.com/de/resources/customer-stories/poco/',
@@ -112,6 +119,14 @@ export const PROJECTS: Project[] = [
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
+  {
+    company: 'CASPAR DIGITAL',
+    title: 'Founder | AI Consultant & Workflow Engineer',
+    start: '2025',
+    end: 'now',
+    link: 'https://www.caspar-digital.de',
+    id: 'work1',
+  },
   {
     company: 'POCO Einrichtungsmärkte GmbH',
     title: 'Head of Digital',
